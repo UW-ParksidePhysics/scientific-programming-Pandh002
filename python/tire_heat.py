@@ -48,7 +48,7 @@ def convert_units(input_value, input_units, output_units):
         output_value = input_value / grams_to_kilograms
     return output_value
 
-
+#main body of the code
 if __name__  == "__main__":
     print("calculating tire heat")
 
@@ -57,11 +57,11 @@ if __name__  == "__main__":
     tire_speed_ratings = ratings['Maximum speed (MPH)'][0:7].astype('float').to_numpy()
     tire_load = load_indexes['Load (lbs)'].astype('float').to_numpy()
 
+#
     tire_speed_ratings = convert_units(tire_speed_ratings, 'mph', 'm/s')
     tire_load = convert_units(tire_load, 'lbs', 'kg')
 
-    print(f'v = {tire_speed_ratings[-1]}')
-
+  # reference for data in table
   # https://www.matweb.com/search/datasheet_print.aspx?matguid=6588439546ac4492965c894ddff3f5da
     tire_specific_heat = 0.440  ## J/g°C
     tire_specific_heat = convert_units(tire_specific_heat, "J/g°C", "J/kg K")
