@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+#final temperature equation
 def calculate_final_temperature(masses, specific_heat, initial_speed, initial_temperature):
     """
     calculates the final temperature by equating the kinetic energy change to heat flow
@@ -28,6 +28,7 @@ def extract_tire_data(url):
     tire_load_indexes=url_tables[1]
     return speed_ratings, tire_load_indexes
 
+#conversion of units
 def convert_units(input_value, input_units, output_units):
     """
 
@@ -52,12 +53,13 @@ def convert_units(input_value, input_units, output_units):
 if __name__  == "__main__":
     print("calculating tire heat")
 
+#pull tire data from justtires.com website link0
     tire_data_url = 'https://www.justtires.com/en-US/learn/load-index-speed-rating'
     ratings, load_indexes = extract_tire_data(tire_data_url)
     tire_speed_ratings = ratings['Maximum speed (MPH)'][0:7].astype('float').to_numpy()
     tire_load = load_indexes['Load (lbs)'].astype('float').to_numpy()
 
-#
+#units of conversion of tire speed and tire load
     tire_speed_ratings = convert_units(tire_speed_ratings, 'mph', 'm/s')
     tire_load = convert_units(tire_load, 'lbs', 'kg')
 
@@ -74,7 +76,7 @@ if __name__  == "__main__":
     print(f'v^2 = {tire_speed_ratings[-1]**2}')
     print(f'0.5 m_k/m_T/c v^2 = {0.5*(tire_load[-1] + 4 * tire_mass)*tire_speed_ratings[-1]**2 / (4 * tire_mass*tire_specific_heat)}')
 
-
+#find temperature in accordance with all 4 tires
     starting_temperature = 273.15 + 25
     for load in tire_load:
         total_mass = 4 * tire_mass + load
@@ -83,6 +85,7 @@ if __name__  == "__main__":
                                                    starting_temperature)
 
         plt.plot(tire_speed_ratings, temperatures-starting_temperature, label=f'{load:.0f}')
+
 # label the x-axis using xlabel, label y-axis using ylabel, create a legend using
     #labelequals in play command plt.function
     plt.xlabel("Velocity at the start of the skid [m/s]")
