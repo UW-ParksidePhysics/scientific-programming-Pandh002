@@ -1,3 +1,5 @@
+author __Trevor Pandher__
+
 import numpy as np
 import matplotlib.pyplot as plt
 import fit_curve_array as fit_curve_array
