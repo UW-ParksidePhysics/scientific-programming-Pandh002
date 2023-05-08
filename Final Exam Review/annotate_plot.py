@@ -1,3 +1,5 @@
+__author__ = 'Trevor Pandher'
+
 import matplotlib.pyplot as plt
 
 
