@@ -1,3 +1,5 @@
+__author__ = 'Trevor Pandher'
+
 import numpy as np
 from numpy import polyfit
 
