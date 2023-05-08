@@ -1,4 +1,4 @@
-author __Trevor Pandher__
+__author__ = 'Trevor Pandher'
 
 import numpy as np
 import matplotlib.pyplot as plt
