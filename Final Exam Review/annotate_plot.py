@@ -23,3 +23,4 @@ if __name__ == "__main__":
              horizontalalignment=test_annotations['alignment'][0], verticalalignment=test_annotations['alignment'][1],
              fontsize=test_annotations['fontsize'])
     plt.show()
+ 
