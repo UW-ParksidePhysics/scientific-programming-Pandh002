@@ -4,3 +4,4 @@ modules = ['read_two_columns', 'calculate_bivariate_statistics', 'calculate_quad
 for module in modules:
     with open(module+'.py') as module_file:
         exec(module_file.read())
+ 
