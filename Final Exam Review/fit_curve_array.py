@@ -18,4 +18,4 @@ def fit_curve_array(quadratic_coefficients, xmin, xmax, number_of_points=100):
 
 if __name__ == '__main__':
     quadratic_coefficients = [0, 0, 1]
-    print(fit_curve_array(quadratic_coefficients, -2, 2))
+    print(fit_curve_array(quadratic_coefficients, -2, 2)) 
