@@ -15,4 +15,4 @@ if __name__ == "__main__":
     data = [[-2, -1, 0, 1, 2], [4, 1, 0, 1, 4]]
     test_curve = [np.linspace(-2, 2), np.linspace(-2, 2) ** 2]
     plot_data_with_fit(data, test_curve)
-    plt.show()
+    plt.show() 
