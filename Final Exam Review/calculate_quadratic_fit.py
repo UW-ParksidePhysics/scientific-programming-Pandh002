@@ -19,3 +19,4 @@ def calculate_quadratic_fit(data):
 if __name__ == '__main__':
     test_data = [np.linspace(-1,1), np.linspace(-1,1)**2]
     print(calculate_quadratic_fit(test_data))
+ 
