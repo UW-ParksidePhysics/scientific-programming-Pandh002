@@ -31,3 +31,4 @@ if __name__ == "__main__":
     yvalues = xvalues ** 2
     test_data = np.array([xvalues, yvalues])
     print(calculate_bivariate_statistics(test_data))
+ 
