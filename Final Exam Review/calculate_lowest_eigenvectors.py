@@ -14,3 +14,4 @@ if __name__ == "__main__":
     number_test_eigenvectors = 2
     print(f'eigenvalues = {calculate_lowest_eigenvectors(test_matrix, number_test_eigenvectors)[0]}')
     print(f'eigenvectors = {calculate_lowest_eigenvectors(test_matrix, number_test_eigenvectors)[1]}')
+ 
