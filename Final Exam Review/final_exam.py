@@ -58,3 +58,4 @@ if __name__ == "__main__":
                    'position': np.array([np.min(volume_list1), np.min(energy_list1)]), 'alignment': ['left', 'bottom'], 'fontsize': 10})
     plt.show()
   
+ 
