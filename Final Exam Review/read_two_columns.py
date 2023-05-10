@@ -21,3 +21,4 @@ if __name__ == "__main__":
     test_file = 'volumes_energies.dat'
     test_data = read_two_columns_text(test_file)
     print(f'{test_data=}, shape={test_data.shape}')
+ 
